@@ -1,0 +1,52 @@
+{
+  "name": "fcc-metric-imperial-converter",
+  "version": "1.0.0",
+  "description": "A simple full-stack server-side rendered web application built on HTML, CSS (with Boostrap), vanilla Javascript (client-side), NodeJS and Express to convert metric units to imperial and vice versa for freeCodeCamps' Quality Assurance certification.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node -r dotenv/config --watch server.js dotenv_config_path=.env.dev",
+    "lint": "eslint src --ext .js,.jsx",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "prettier . --check",
+    "prettier:fix": "prettier . --write --config .prettierrc.json",
+    "test": "mocha ./tests/ --ui tdd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mrarvind90/fcc-metric-imperial-converter.git"
+  },
+  "keywords": [
+    "freeCodeCamp",
+    "html",
+    "bootstrap",
+    "javascript",
+    "nodejs",
+    "expressjs",
+    "express-validator",
+    "cors"
+  ],
+  "author": "Arvindran Kalidas <arvindrankalidas@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrarvind90/fcc-metric-imperial-converter/issues"
+  },
+  "homepage": "https://github.com/mrarvind90/fcc-metric-imperial-converter#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "mathjs": "^11.11.1",
+    "winston": "^3.10.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.8",
+    "chai-http": "^4.4.0",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "mocha": "^10.2.0",
+    "prettier": "^3.0.3"
+  }
+}
