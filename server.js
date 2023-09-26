@@ -7,6 +7,7 @@ import logger from './config/logger.js';
 import { route } from './routes/index.js';
 import { handler } from './middlewares/handlers/index.js';
 import { fcc } from './routes/fcc.js';
+import runner from './tests/runner.js';
 
 // Initialise express server
 const app = express();
@@ -35,6 +36,17 @@ app.use(handler.error._404);
 // Server
 app.listen(process.env.PORT, () => {
 	logger.info(`Application started and listening at port ${process.env.PORT}`);
+	if (process.env.NODE_ENV === 'test') {
+		logger.info('Running Tests...');
+		setTimeout(function () {
+			try {
+				runner.run();
+			} catch (e) {
+				logger.error('Tests are not valid:');
+				logger.error(e);
+			}
+		}, 1500);
+	}
 });
 
 export default app;
