@@ -11,7 +11,7 @@
     "lint:fix": "npm run lint -- --fix",
     "prettier": "prettier . --check",
     "prettier:fix": "prettier . --write --config .prettierrc.json",
-    "test": "mocha ./tests/ --ui tdd"
+    "test": "mocha ./tests/ --ui tdd --exit"
   },
   "repository": {
     "type": "git",
